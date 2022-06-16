@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>form</class>
+ <widget class="QWidget" name="form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>955</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="MyLineEdit" name="lineEdit"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>172</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>A</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>E</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>I</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>O</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>U</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>Shift</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>172</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>MyLineEdit.h</header>
+   <slots>
+    <slot>setA()</slot>
+    <slot>setE()</slot>
+    <slot>setI()</slot>
+    <slot>setO()</slot>
+    <slot>setU()</slot>
+    <slot>shift()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>released()</signal>
+   <receiver>form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>453</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>758</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>released()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>setA()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>70</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>setE()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>127</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>released()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>setI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>16</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>released()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>setO()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>233</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>released()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>setU()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>373</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>released()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>shift()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>511</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

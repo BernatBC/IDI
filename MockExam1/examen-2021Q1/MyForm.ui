@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyForm</class>
+ <widget class="QWidget" name="MyForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>589</width>
+    <height>496</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>IDI-Lab</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="MyGLWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Seleccionar cub Patricio:</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QRadioButton" name="radioButton_6">
+          <property name="text">
+           <string>Cub-1</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_7">
+          <property name="text">
+           <string>Cub-2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_5">
+          <property name="text">
+           <string>Cub-3</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>Seleccionar Càmera:</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="radioButton">
+          <property name="text">
+           <string>Càmera-1</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_2">
+          <property name="text">
+           <string>Càmera-2</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>&amp;Sortir</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGLWidget</class>
+   <extends>QWidget</extends>
+   <header>MyGLWidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>send1(bool)</signal>
+    <signal>send2(bool)</signal>
+    <signal>send3(bool)</signal>
+    <signal>sendc1(bool)</signal>
+    <signal>sendc2(bool)</signal>
+    <slot>Cub1()</slot>
+    <slot>Cub2()</slot>
+    <slot>Cub3()</slot>
+    <slot>cam1()</slot>
+    <slot>cam2()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MyForm</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>567</x>
+     <y>487</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>588</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>Cub1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>Cub2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>474</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>Cub3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>473</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>send1(bool)</signal>
+   <receiver>radioButton_6</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>382</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>460</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>send2(bool)</signal>
+   <receiver>radioButton_7</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>351</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>send3(bool)</signal>
+   <receiver>radioButton_5</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>322</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>cam1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>widget</receiver>
+   <slot>cam2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>447</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>389</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>sendc1(bool)</signal>
+   <receiver>radioButton</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>517</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>sendc2(bool)</signal>
+   <receiver>radioButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>form</class>
+ <widget class="QWidget" name="form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>629</width>
+    <height>340</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Atzar</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>JOC D'ATZAR</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Trios aconseguits:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="lcdNumber"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>85</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Rectangles</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="MyPushButton" name="pushButton">
+        <property name="styleSheet">
+         <string notr="true">background: rgb(124, 124, 124)</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="MyPushButton" name="pushButton_2">
+        <property name="styleSheet">
+         <string notr="true">background: rgb(124, 124, 124)</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="MyPushButton" name="pushButton_3">
+        <property name="styleSheet">
+         <string notr="true">background: rgb(124, 124, 124)</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>84</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="MyPushButton" name="pushButton_6">
+       <property name="text">
+        <string>&amp;Start</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="MyPushButton" name="pushButton_5">
+       <property name="text">
+        <string>&amp;Reinicia</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>Sortir</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyPushButton</class>
+   <extends>QPushButton</extends>
+   <header>MyPushButton.h</header>
+   <slots>
+    <signal>sendNum(int)</signal>
+    <signal>emit1(int)</signal>
+    <signal>emit2(int)</signal>
+    <signal>emit3(int)</signal>
+    <signal>startKey()</signal>
+    <signal>resetKey()</signal>
+    <slot>setColor(int)</slot>
+    <slot>start()</slot>
+    <slot>reset()</slot>
+    <slot>pressed1()</slot>
+    <slot>pressed2()</slot>
+    <slot>pressed3()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>released()</signal>
+   <receiver>form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>587</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>501</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>emit1(int)</signal>
+   <receiver>pushButton</receiver>
+   <slot>setColor(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>192</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>emit2(int)</signal>
+   <receiver>pushButton_2</receiver>
+   <slot>setColor(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>322</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>emit3(int)</signal>
+   <receiver>pushButton_3</receiver>
+   <slot>setColor(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>322</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>517</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>sendNum(int)</signal>
+   <receiver>lcdNumber</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>released()</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>start()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>released()</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>362</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>315</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>released()</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>pressed1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>released()</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>pressed3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>474</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>200</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>released()</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>pressed2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>183</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

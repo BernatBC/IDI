@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyForm</class>
+ <widget class="QWidget" name="MyForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>918</width>
+    <height>726</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>IDI-Lab</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="MyGLWidget" name="widget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>Càmera:</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="radioButton">
+          <property name="text">
+           <string>Prespectiva</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_2">
+          <property name="text">
+           <string>Ortogonal</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>Rotació Patricio:</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QDial" name="dial">
+          <property name="maximum">
+           <number>31</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>&amp;Sortir</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGLWidget</class>
+   <extends>QWidget</extends>
+   <header>MyGLWidget.h</header>
+   <container>1</container>
+   <slots>
+    <signal>setCam1(bool)</signal>
+    <signal>setCam2(bool)</signal>
+    <signal>setAngle(int)</signal>
+    <slot>Cam1()</slot>
+    <slot>Cam2()</slot>
+    <slot>Rotation(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MyForm</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>845</x>
+     <y>715</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>839</x>
+     <y>529</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>843</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>892</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>widget</receiver>
+   <slot>Cam1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>834</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>665</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_2</sender>
+   <signal>pressed()</signal>
+   <receiver>widget</receiver>
+   <slot>Cam2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>835</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>755</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>setCam1(bool)</signal>
+   <receiver>radioButton</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>850</x>
+     <y>50</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>setCam2(bool)</signal>
+   <receiver>radioButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>739</x>
+     <y>171</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>824</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widget</receiver>
+   <slot>Rotation(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>835</x>
+     <y>371</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>724</x>
+     <y>367</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>setAngle(int)</signal>
+   <receiver>dial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>621</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>834</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widget</sender>
+   <signal>setAngle(int)</signal>
+   <receiver>label</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>719</x>
+     <y>514</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>893</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
